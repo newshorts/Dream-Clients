@@ -1,0 +1,23 @@
+@media print{@page {size: landscape}}
+
+#wrap {
+/*    width: 1024px;
+    height: 511px;*/
+    width: 1600px;
+    height: 799px;
+    position: relative;
+}
+
+#wrap img {
+    position: absolute;
+    bottom: 0;
+/*    left: -250px;*/
+    width: 1024px;
+    height: 511px;
+/*    -webkit-transform: rotate(90deg); -moz-transform:rotate(90deg);
+     filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);*/
+}
+
+.no-print {
+    display: none;
+}

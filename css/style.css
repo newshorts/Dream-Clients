@@ -1,0 +1,620 @@
+/* 
+    Document   : style
+    Created on : Mar 6, 2012, 11:58:04 AM
+    Author     : mike_newell
+    Description:
+        GSP Dream Client Site
+*/
+
+root { 
+    display: block;
+}
+
+/*@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200);*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-weight:inherit;
+    font-style:inherit;
+    font-size:100%;
+    font-family:inherit;
+    vertical-align:baseline
+}
+body {
+/*    font-family: 'Yanone Kaffeesatz', sans-serif;*/
+    font-family: futura, sans-serif;
+    background-color: #323232;
+/*	margin:20px;*/
+    font-weight:thin;
+    letter-spacing:0.0em;
+    color: #fbfbfb;
+}
+
+header, footer, section, article, aside {
+    display: block;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 23.5px;
+    font-weight: lighter;
+    padding-bottom: 45px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 13.5px;
+    font-weight: lighter;
+}
+
+h4 {
+    font-size: 11.5px;
+    font-weight: lighter;
+}
+
+:focus {
+	outline:0
+}
+a, a:visited {
+    color:#5b8abf;
+    text-decoration:none;
+    -webkit-transition:color 0.2s linear;
+    -moz-transition-property:color;
+    -moz-transition-duration:0.2s;
+    font-size:100%
+}
+a:hover, .name:hover {
+    color:#000
+}
+li {
+    font-weight: lighter;
+    font-size: 12.5px;
+    list-style:none;
+    margin-bottom:0.2em;
+}
+p {
+    margin: -10px 0 2em;
+    font-weight: lighter;
+    font-size: 12.5px;
+}
+
+hr {
+    margin: 45px 0 12px 0;
+}
+
+/*******************************************************************************
+                                    LAYOUT
+*******************************************************************************/
+
+#wrap {
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+    background-color: black;
+    -moz-box-shadow: 0px 0px 40px #000; /* Firefox */
+    -webkit-box-shadow: 0px 0px 40px #000; /* Safari, Chrome */
+    box-shadow: 0px 0px 40px #000; /* CSS3 */
+}
+
+#wrap > header {
+    position: relative;
+    width: 1200px;
+    height: 106px;
+    background: url(../images/header-bg_1200x106.png) scroll no-repeat #000;
+    -moz-box-shadow: 0px 12px 20px 0px #000; /* Firefox */
+    -webkit-box-shadow: 0px 12px 20px 0px #000; /* Safari, Chrome */
+    box-shadow: 0px 12px 20px 0px #000; /* CSS3 */
+}
+
+header h1 a {
+    display: block;
+    text-indent: -9999px;
+    background: url(../images/logo_512x82.png) scroll no-repeat transparent;
+    width: 512px;
+    height: 82px;
+    position: absolute;
+    top: 13px;
+    left: 42px;
+}
+
+#gsp {
+    width: 1200px;
+    min-height: 760px;
+    background: url(../images/street_1200x760.jpg) scroll no-repeat #000;
+    position: relative;
+}
+
+/*#top-floor {
+    position:
+}*/
+
+#agency-positioner {
+    top: 30px;
+    left: 42px;
+}
+
+#agency-positioner p:last-child {
+    margin-bottom: 10px;
+}
+
+#your-agency {
+    background: url(../images/your-agency.png) scroll -19px -10px no-repeat transparent;
+    text-indent: -9999px;
+}
+
+#wish-list {
+    background: url(../images/wish-list.png) scroll -11px -18px no-repeat transparent;
+    text-indent: -9999px;
+    width: 100%;
+}
+
+#client-positioner {
+    top: 329px;
+    left: 42px;
+}
+
+#client-roster {
+    height: 0;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+    overflow: hidden;
+}
+
+#client-roster ul {
+    float: left;
+    width: 120px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+#client-roster ul:last-child {
+    margin-right: 0;
+}
+
+#clients {
+    width: 1200px;
+    min-height: 761px;
+/*    background: url(../images/clients-bg_1205x663.jpg) scroll no-repeat #000;*/
+    position: relative;
+    background-color: black;
+    -moz-box-shadow:    inset 0 0 10px #000;
+    -webkit-box-shadow: inset 0 0 10px #000;
+    box-shadow:         inset 0 0 10px #000;
+}
+
+#clients .radial {
+    position: absolute;
+    top: 188px;
+    left: 500px;
+    width: 550px;
+    height: 550px;
+}
+
+#c1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#form-container {
+    width: 368px;
+    height: 603px;
+    background: url(../images/form-bg_368x603.png) scroll no-repeat;
+    position: absolute;
+    top: -104px;
+    left: 42px;
+    
+    -webkit-transition: opacity .8s ease;
+    -moz-transition: opacity .8s ease;
+    -o-transition: opacity .8s ease;
+    transition: opacity .8s ease;
+}
+
+#form-container form {
+    position: relative;
+}
+
+form h2 {
+    position: absolute;
+    top: -131px;
+    left: 28px;
+    
+}
+
+form p {
+    position: absolute;
+    top: -65px;
+    left: 28px;
+    width: 295px;
+}
+
+footer {
+    padding: 50px;
+}
+
+footer p {
+    text-align: center;
+}
+
+/*******************************************************************************
+                                TEXT SHADOWS
+*******************************************************************************/
+
+.light-shadow {
+    text-shadow: -1px -1px #666, 1px 7px 6px #000;
+}
+
+.heavy-shadow {
+    text-shadow: -1px -1px #666, 1px 2px 2px #000;
+}
+
+/*******************************************************************************
+                                INSIDE BOXES
+*******************************************************************************/
+
+/*
+
+    THE INTENTION IS TO POSITION THESE WITH NO WIDTH AND HEIGHT, THEN ON HOVER,
+    EXPAND THEM INDIVIDUALLY
+
+*/
+
+.inside {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+/*******************************************************************************
+                                BUILDING HOVERS
+*******************************************************************************/
+
+.floor-image {
+    position: absolute;
+    z-index: 10;
+}
+
+.floor-image img {
+    zoom: 1;
+    filter: alpha(opacity=00);
+    opacity: 0.0;
+    
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+#first {
+    width: 381px;
+    height: 188px;
+    top: 409px;
+    left: 614px;
+}
+
+/*#second {
+    width: 297px;
+    height: 169px;
+    
+}*/
+
+#third {
+    width: 366px;
+    height: 156px;
+    top: 252px;
+    left: 628px;
+}
+
+#fourth {
+    width: 423px;
+    height: 180px;
+    top: 153px;
+    left: 434px;
+}
+
+#fifth {
+    width: 297px;
+    height: 169px;
+    top: 79px;
+    left: 486px;
+}
+
+/*#sixth {
+    width: 297px;
+    height: 169px;
+    top: 79px;
+    left: 486px;
+}*/
+
+#lift {
+    top: 21px;
+    left: 874px;
+    width: 186px;
+    height: 564px;
+}
+
+#parking {
+    top: 470px;
+    left: 61.5px;
+    width: 342px;
+    height: 205px;
+}
+
+/*******************************************************************************
+                                    DIALOG
+*******************************************************************************/
+
+.dialog-positioner {
+    position: absolute;
+}
+
+.dialog-container {
+    position: relative;
+}
+
+.dialog-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    -moz-box-shadow: 0px 2px 8px #000; /* Firefox */
+    -webkit-box-shadow: 0px 2px 8px #000; /* Safari, Chrome */
+    box-shadow: 0px 2px 8px #000; /* CSS3 */
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    z-index: 1;
+    
+}
+
+.dialog-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    padding: 1px;
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    background-color: white;
+    
+    z-index: 2;
+}
+
+.dialog {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    /*started at 376 wide */
+    width: 312px;
+    padding: 30px 42px 30px 22px;
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    background: #3f3b3d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3f3b3d), to(#2c292b));
+    background: -webkit-linear-gradient(top, #3f3b3d, #2c292b);
+    background: -moz-linear-gradient(top, #3f3b3d, #2c292b);
+    background: -ms-linear-gradient(top, #3f3b3d, #2c292b);
+    background: -o-linear-gradient(top, #3f3b3d, #2c292b);
+    
+    z-index: 3;
+    
+}
+
+/*******************************************************************************
+                                    RADIAL GRADIENT
+*******************************************************************************/
+
+.radial {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    background-image: -moz-radial-gradient(center 45deg, circle closest-side, white 0%, black 100%);
+    background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 275, from(white), to(black));
+    background-image: -ms-radial-gradient(center 45deg, circle closest-side, white 0%, black 100%);
+    background-image: -o-radial-gradient(center 45deg, circle closest-side, white 0%, black 100%);
+}
+
+/*******************************************************************************
+                                    FORMS
+*******************************************************************************/
+
+form ul {
+    margin-top: 172px;
+}
+
+form li {
+    margin: 19px 0 0 56px;
+    position: relative;
+}
+
+input[type="text"] {
+    background-color: transparent;
+    width: 255px;
+    height: 41px;
+    border: 1px solid #767578;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+/*    -moz-box-shadow:    inset 0 9px 43px #000000;
+    -webkit-box-shadow: inset 0 9px 43px #000000;
+    box-shadow:         inset 0 9px 43px #000000;*/
+    -moz-box-shadow:    inset 0 16px 40px rgba(0,0,0,.6);
+    -webkit-box-shadow: inset 0 16px 40px rgba(0,0,0,.6);
+    box-shadow:         inset 0 16px 40px rgba(0,0,0,.6);
+    color: #fbfbfb;
+    font-size: 13.5px;
+    padding: 0 10px;
+}
+
+input[type="submit"] {
+    margin: 30px 0 0 56px;
+}
+
+.button {
+    width: 278px;
+    height: 55px;
+    border: 1px solid #787a77;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background: #8f1111;
+/*    background: -webkit-gradient(linear, left top, left bottom, from(#a23939), to(#8f1111));
+    background: -webkit-linear-gradient(top, #a23939, #8f1111);
+    background: -moz-linear-gradient(top, #a23939, #8f1111);
+    background: -ms-linear-gradient(top, #a23939, #8f1111);
+    background: -o-linear-gradient(top, #a23939, #8f1111);*/
+    padding: 0px 32px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0px 3px 8px;
+    -moz-box-shadow: rgba(0,0,0,1) 0px 3px 8px;
+    box-shadow: rgba(0,0,0,1) 0px 3px 8px;
+    text-shadow: rgba(0,0,0,1) 1px 3px 4px;
+    color: #fff;
+    font-size: 26px;
+    text-decoration: none;
+    vertical-align: middle;
+    
+    -webkit-transition: background-color .2s ease;
+    -moz-transition: background-color .2s ease;
+    -o-transition: background-color .2s ease;
+    transition: background-color .2s ease;
+}
+
+.button:hover {
+    background: #8f1111;
+/*    background: -webkit-gradient(linear, left top, left bottom, from(#8f1111), to(#9b2a2a));
+    background: -webkit-linear-gradient(top, #8f1111, #9b2a2a);
+    background: -moz-linear-gradient(top, #8f1111, #9b2a2a);
+    background: -ms-linear-gradient(top, #8f1111, #9b2a2a);
+    background: -o-linear-gradient(top, #8f1111, #9b2a2a);*/
+    color: #fbfbfb;
+}
+
+.button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+    position: relative;
+    top: 3px;
+}
+
+/*******************************************************************************
+                        DYNAMIC BUBBLES & FORM CONTAINER
+*******************************************************************************/
+
+#dynamic-bubbles {
+    width: 1200px;
+    height: 761px;
+    
+    -webkit-transition: opacity .8s ease;
+    -moz-transition: opacity .8s ease;
+    -o-transition: opacity .8s ease;
+    transition: opacity .8s ease;
+}
+
+
+
+/*******************************************************************************
+                                CATEGORY SWITCHER
+*******************************************************************************/
+
+#category-switcher {
+    
+    width: 287px;
+    height: 152px;
+    color: white;
+    position: absolute;
+    top: -75px;
+    left: 800px;
+    background: url(../images/state-change.png) scroll no-repeat transparent;
+    
+    
+/*    -webkit-transition: left .8s ease;
+    -moz-transition: left .8s ease;
+    -o-transition: left .8s ease;
+    transition: left .8s ease;
+    
+    -webkit-transition: top .8s ease;
+    -moz-transition: top .8s ease;
+    -o-transition: top .8s ease;
+    transition: top .8s ease;*/
+}
+
+#category-switcher:hover {
+/*    left: 810px;*/
+    
+    -webkit-transition: left .8s ease;
+    -moz-transition: left .8s ease;
+    -o-transition: left .8s ease;
+    transition: left .8s ease;
+}
+
+#category-switcher:active {
+/*    top: -72px;*/
+    
+/*    -webkit-transition: top .1s ease;
+    -moz-transition: top .1s ease;
+    -o-transition: top .1s ease;
+    transition: top .1s ease;*/
+}
+
+#category-switcher-wrap {
+    position: relative;
+    width: 287px;
+    height: 152px;
+    top: 0;
+    left: 0;
+}
+
+.brand-view {
+    top: 34px;
+}
+
+.category-view {
+    top: 79px;
+}
+
+.switcher {
+/*    border: 1px dotted red;*/
+    
+    left: 40px;
+    display: block;
+    width: 209px;
+    height: 40px;
+    position: absolute;
+}
+
+
+/*******************************************************************************
+                                    LOADER
+*******************************************************************************/
+
+#loader {
+    background: url(../images/preloader.gif) scroll no-repeat transparent;
+    width:100px;
+    height: 100px;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+}

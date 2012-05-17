@@ -1,0 +1,52 @@
+<!--
+    Displays the chuck buck image
+
+    There's an easter egg in here to get more chuck bucks...
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chuck Buck</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/chuck-print.css" rel="stylesheet" type="text/css" media="print" />
+        <link href="css/chuck-style.css" rel="stylesheet" type="text/css" media="screen" />
+        
+    </head>
+    <body>
+        <h1 class="dark no-print">Good job, you've earned a Chuck Buck.</h1>
+        <p class="light no-print">(This is for free beer. Did we mention the free beer?)</p>
+        <p class="dark no-print">Print it and bring it next door at 5PM on May 1st. See you there.</p>
+        <div id="wrap">
+            <h2>Chuck Buck</h2>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write("<script src='js/jquery-1.7.1.min.js'>\x3C/script>")</script>
+        <script>
+            (function($) {
+                
+                $(window).load(function() {
+                    
+                    if(window.location.hash != "undefined") {
+                        
+                        var hash = window.location.hash;
+                        
+                        var now = Math.round((new Date()).getTime() / 1000);
+                        
+                        var tenMinutesAgo = (now) - 600;
+                        
+                        hash = parseInt(hash.replace("#", ""));
+                        // uncomment to turn timelock on
+//                        if(hash > tenMinutesAgo && hash <= now) {
+                            $("#wrap").html('<img src="images/chuck_buck.jpg" alt="Chuck Buck Image Failed to Load, Please Reload the Page" />')
+//                        } else {
+                            console.debug("free pass: http://" + window.location.host + window.location.pathname + "#" + now);
+//                        }
+                        
+                    }
+                    
+                });
+                
+            })(jQuery);
+        </script>
+    </body>
+</html>
